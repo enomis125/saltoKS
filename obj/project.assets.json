@@ -94,19 +94,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\cokas\\.nuget\\packages\\": {}
+    "C:\\Users\\pista\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\cokas\\Desktop\\teste\\teste.csproj",
+      "projectUniqueName": "D:\\micronet\\saltoKS\\teste.csproj",
       "projectName": "teste",
-      "projectPath": "C:\\Users\\cokas\\Desktop\\teste\\teste.csproj",
-      "packagesPath": "C:\\Users\\cokas\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\cokas\\Desktop\\teste\\obj\\",
+      "projectPath": "D:\\micronet\\saltoKS\\teste.csproj",
+      "packagesPath": "C:\\Users\\pista\\.nuget\\packages\\",
+      "outputPath": "D:\\micronet\\saltoKS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\cokas\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\pista\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
