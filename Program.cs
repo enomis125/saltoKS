@@ -7,6 +7,7 @@ using System.Web;
 using Newtonsoft.Json.Linq;
 using System.Linq;
 using System.Data.SqlClient;
+using System.IO; 
 
 class Program
 {
@@ -15,6 +16,9 @@ class Program
     static async Task Main(string[] args)
     {
         Console.OutputEncoding = System.Text.Encoding.UTF8;
+
+        // Lê a connection string do arquivo
+        string connectionString = ReadConnectionStringFromFile("connectionString.txt");
 
         var clientId = "956ebbbe-785a-4948-8592-ad2b826b0e6a";
         var redirectUri = "https://app-accept.saltoks.com/callback";
@@ -196,6 +200,21 @@ class Program
                     Console.WriteLine("Escolha inválida. Por favor, introduza um número entre 1 e 5.");
                     break;
             }
+        }
+    }
+
+//lê a connection string do txt
+    private static string ReadConnectionStringFromFile(string filePath)
+    {
+        try
+        {
+            // Lê todo o conteúdo do arquivo e retorna como string
+            return File.ReadAllText(filePath);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Erro ao ler a connection string do arquivo: {ex.Message}");
+            return null;
         }
     }
 
@@ -464,7 +483,7 @@ class Program
 
     private static void SavePinToDatabase(string userId, string pinCode, string requestBody, string siteId, string responseBody, string requestUrl, int responseStatus, string requestType, bool isError)
 {
-    string connectionString = "Server=COKAS;Database=protelmprado;Integrated Security=True;";
+    string connectionString = ReadConnectionStringFromFile("connectionString.txt"); // Lê novamente se necessário
 
     try
     {
